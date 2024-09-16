@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/FSON-109JS-Vite/",
     "preview": "vite preview"
   },
   "devDependencies": {
