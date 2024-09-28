@@ -1,1 +1,2 @@
-import "./js/api";
+import './js/api';
+import './js/event';
