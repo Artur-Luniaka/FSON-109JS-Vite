@@ -10,12 +10,12 @@ import axios from 'axios';
 const baseUrl = 'https://app.ticketmaster.com/discovery/v2/';
 const apiKey = 'uHSLi07StIOlriMPxJGxUbSYsHDs6AFx';
 
-export async function fetchData(page) {
+export async function fetchData(page, keyword) {
   const responce = await axios.get(
-    `${baseUrl}events.json?apikey=${apiKey}&page=${page}`
+    `${baseUrl}events.json?apikey=${apiKey}&page=${page}&keyword=${keyword}`
   );
   console.log(responce.data);
   return responce.data;
 }
 
-fetchData(1);
+// fetchData(1);
