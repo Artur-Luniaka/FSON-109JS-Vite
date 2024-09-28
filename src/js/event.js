@@ -1,4 +1,5 @@
 import { fetchData } from './api.js';
+import { page, reset } from './pagination.js';
 
 const listEvent = document.querySelector('.list');
 
@@ -16,10 +17,11 @@ function createMarkup(array) {
   listEvent.innerHTML = markup;
 }
 
-async function renderEvents(page) {
+export async function renderEvents(page) {
   const data = await fetchData(page);
+  if (page === 1) reset(data.page.totalElements);
   console.log(data._embedded.events);
   createMarkup(data._embedded.events);
 }
 
-renderEvents(1);
+renderEvents(page);
